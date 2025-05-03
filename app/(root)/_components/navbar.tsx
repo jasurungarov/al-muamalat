@@ -75,7 +75,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='h-[10vh] backdrop-blur-sm border-b fixed z-40 inset-0 bg-background'>
+    <div className='sm:w-full h-[10vh] backdrop-blur-sm border-b fixed z-40 inset-0 bg-background'>
       <div className='container max-w-6xl mx-auto h-[10vh] w-full flex items-center justify-between px-4'>
 
         {/* Logo */}

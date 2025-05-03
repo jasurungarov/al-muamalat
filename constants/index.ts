@@ -5,6 +5,7 @@ import {
 	ListCollapse,
 } from 'lucide-react'
 
+
 export const navLinks = [
 	{ name: 'Home', route: '/', icon: Home },
 	{ name: 'Programs', route: '/programs', icon: ListCollapse },
@@ -78,5 +79,59 @@ export const companies = [
 	},
 	{
 		title:'Revolut',
+	},
+]
+
+export const media = [
+	{
+		title:"Why Islamic finance?",
+		image:"/media/Rectangle 4.png",
+		image1:"/media/play-circle.png"
+	},
+	{
+		title:"What makes Islamic finance unique?",
+		image:"/media/Rectangle 5 (1).png",
+		image1:"/media/play-circle (1).png"
+	},
+	{
+		title:"How is risk managed in Islamic finance?",
+		image:"/media/Rectangle 5 (2).png",
+		image1:"/media/play-circle (1).png"
+	},
+	{
+		title:"Why Islamic finance?",
+		image:"/media/Rectangle 4.png",
+		image1:"/media/play-circle.png"
+	},
+	{
+		title:"What makes Islamic finance unique?",
+		image:"/media/Rectangle 5 (1).png",
+		image1:"/media/play-circle (1).png"
+	},
+	{
+		title:"How is risk managed in Islamic finance?",
+		image:"/media/Rectangle 5 (2).png",
+		image1:"/media/play-circle (1).png"
+	},
+]
+
+export const frame = [
+	{
+		description:'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College.',
+		image: '/Frame.png',
+		name: 'Finlay Kirk',
+		title: 'Web Designer'
+	},
+	{
+		description:'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College.',
+		image: '/Frame.png',
+		name: 'Finlay Kirk',
+		title: 'Web Designer'
+	},
+	{
+		description:'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College.',
+		image: '/Frame.png',
+		name: 'Finlay Kirk',
+		title: 'Web Designer'
 	},
 ]
