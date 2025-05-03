@@ -56,7 +56,6 @@ function Hero() {
   </p>
 </div>
 
-
 				<Image
 					src={'/odam.png'}
 					alt='hero'

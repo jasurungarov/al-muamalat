@@ -19,7 +19,7 @@ const textColors = [
 function OurPartners() {
   return (
   <div className='container mx-auto max-w-6xl py-24'>
-  <h1 className='text-center text-5xl font-bold'>
+  <h1 className='text-center text-3xl sm:text-4xl md:text-5xl font-bold'>
   Our Partners and Clients
   </h1>
   <div className='w-full mt-5'>
@@ -34,7 +34,7 @@ function OurPartners() {
         key={idx}
         className="basis-1/3 md:basis-1/4 lg:basis-1/6 pl-4"
       >
-        <div className="rounded-xl bg-gray-50 flex items-center justify-center h-24 p-4 shadow-sm text-4xl font-bold">
+        <div className="rounded-xl bg-gray-50 flex items-center justify-center h-24 p-4 shadow-sm md:text-4xl font-bold">
           <span className={textColors[idx % textColors.length]}>
             {title.title}
           </span>
@@ -58,7 +58,7 @@ function OurPartners() {
         key={idx}
         className="basis-1/3 md:basis-1/4 lg:basis-1/6 pl-4"
       >
-        <div className="rounded-xl bg-gray-50 flex items-center justify-center h-24 p-4 shadow-sm text-4xl font-bold">
+        <div className="rounded-xl bg-gray-50 flex items-center justify-center h-24 p-4 shadow-sm md:text-4xl sm:2xl font-bold">
           <span className={textColors[idx % textColors.length]}>
             {title.title}
           </span>

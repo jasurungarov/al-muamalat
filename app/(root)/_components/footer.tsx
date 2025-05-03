@@ -19,63 +19,62 @@ function Footer() {
 
 	return (
 <>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-screen justify-center px-6 ml-52">
-    
-    {/* Birinchi katta div */}
-    <div className="text-[#d28527] w-full flex flex-col justify-center gap-6">
-      <div className="bg-amber-100 h-[360px] p-6 rounded-lg shadow-md flex flex-col justify-center">
-        <h1 className="text-3xl max-md:text-3xl font-creteRound font-bold mb-4">
-          Workshops and Spiritual Development
-        </h1>
-        <p className="text-base leading-relaxed">
-          Participate in our weekly workshops focused on Islamic studies and spiritual growth.
-          These sessions are designed to help you strengthen your connection with faith and acquire 
-          essential skills for daily life.
-        </p>
-      </div>
-    </div>
 
-    {/* Ikkinchi katta div */}
-    <div className="grid max-md:grid-cols-1 md:gap-4 w-full">
-      <div className="w-90">
-        <h1 className="text-4xl mt-2 max-md:text-3xl font-creteRound font-bold">Free consultation</h1>
-        <p>Leave your phone number, and we will reach out to provide you with complete information about our courses.</p>
-      </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center h-screen px-6 sm:px-4 md:ml-50">
 
-      <Input
-        className="w-90 col-span-2 max-md:mt-2"
-        placeholder="Name"
-        onFocus={() => setActive(true)}
-        onBlur={() => setActive(false)}
-      />
-      
-      <Input
-        className="w-90 col-span-2 max-md:mt-2"
-        placeholder="Select your Country"
-        onFocus={() => setActive(true)}
-        onBlur={() => setActive(false)}
-      />
-
-      <div className="flex items-center gap-2">
-        <Checkbox
-          id="terms"
-          checked={agreed}
-          onCheckedChange={(checked) => setAgreed(!!checked)}
-        />
-        <p className="w-90 text-sm text-muted-foreground">
-          I agree to the use of my personal information for consultation purposes.
-        </p>
-      </div>
-
-      <Button
-        size={"lg"}
-        variant={active ? "default" : "outline"}
-        className="w-90 col-span-2 max-md:mt-2"
-      >
-        Submit
-      </Button>
+  {/* Birinchi katta div */}
+  <div className="text-[#d28527] w-full flex flex-col justify-center gap-6">
+    <div className="bg-amber-100 h-[360px] p-6 rounded-lg shadow-md flex flex-col justify-center">
+      <h1 className="text-3xl sm:text-2xl font-creteRound font-bold mb-4">
+        Workshops and Spiritual Development
+      </h1>
+      <p className="leading-relaxed text-sm sm:text-base">
+        Participate in our weekly workshops focused on Islamic studies and spiritual growth. These sessions are designed to help you strengthen your connection with faith and acquire essential skills for daily life.
+      </p>
     </div>
   </div>
+
+  {/* Ikkinchi katta div */}
+  <div className="grid sm:grid-cols-1 md:gap-4 w-full">
+    <div className="w-full">
+      <h1 className="text-4xl sm:text-3xl mt-2 font-creteRound font-bold md:text-5xl">Free consultation</h1>
+      <p className="sm:text-sm text-base md:max-w-90">Leave your phone number, and we will reach out to provide you with complete information about our courses.</p>
+    </div>
+
+    <Input
+      className="w-full sm:w-90 col-span-2 mt-4 sm:mt-2"
+      placeholder="Name"
+      onFocus={() => setActive(true)}
+      onBlur={() => setActive(false)}
+    />
+
+    <Input
+      className="w-full sm:w-90 col-span-2 mt-4 sm:mt-2"
+      placeholder="Select your Country"
+      onFocus={() => setActive(true)}
+      onBlur={() => setActive(false)}
+    />
+
+    <div className="flex items-center gap-2 sm:mt-4 mt-2">
+      <Checkbox
+        id="terms"
+        checked={agreed}
+        onCheckedChange={(checked) => setAgreed(!!checked)}
+      />
+      <p className="text-sm text-muted-foreground sm:w-full md:max-w-90">
+        I agree to the use of my personal information for consultation purposes.
+      </p>
+    </div>
+
+    <Button
+      size="lg"
+      variant={active ? "default" : "outline"}
+      className="w-full sm:w-90 col-span-2 mt-4 sm:mt-2"
+    >
+      Submit
+    </Button>
+  </div>
+</div>
 
   {/* Footer */}
   <div className="mt-12 bg-primary pt-12 max-md:px-4">
