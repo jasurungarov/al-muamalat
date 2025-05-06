@@ -20,7 +20,7 @@ function Footer() {
 	return (
 <>
 
-<div className="-mt-40 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center h-screen px-6 sm:px-4 md:ml-50">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center h-screen px-6 sm:px-4 md:ml-50">
 
   {/* Birinchi katta div */}
   <div className="text-[#d28527] w-full flex flex-col justify-center gap-6">

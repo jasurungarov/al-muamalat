@@ -112,9 +112,8 @@ function Navbar() {
           <ModeToggle />
           <Button
             onClick={() => router.push('/SignIn')}
-            variant="ghost"
             size="lg"
-            className="text-1xl bg-primary"
+            className="text-1xl bg-primary hover:bg-green-950 text-white"
           >
             Sign In
           </Button>

@@ -135,3 +135,107 @@ export const frame = [
 		title: 'Web Designer'
 	},
 ]
+
+export const course = [
+	{
+		name: 'Design',
+		image: '/course/Sample 46.png',
+		title: 'Various versions have evolved daf',
+		narx: '500',
+		image1: '/F1.png'
+	},
+	{
+		name: 'Business',
+		image: '/course/Sample 26.png',
+		title: 'Various versions have evolved daf',
+		narx: '700',
+		image1: '/F2.png'
+	},{
+		name: 'Business',
+		image: '/course/Sample 12.png',
+		title: 'Various versions have evolved daf',
+		narx: '900',
+		image1: '/F1.png'
+	},{
+		name: 'Design',
+		image: '/course/Sample 46.png',
+		title: 'Various versions have evolved daf',
+		narx: '400',
+		image1: '/F2.png'
+	},{
+		name: 'Business',
+		image: '/course/Sample 26.png',
+		title: 'Various versions have evolved daf',
+		narx: '600',
+		image1: '/F1.png'
+	},{
+		name: 'Business',
+		image: '/course/Sample 12.png',
+		title: 'Various versions have evolved daf',
+		narx: '800',
+		image1: '/F2.png'
+	},{
+		name: 'Design',
+		image: '/course/Sample 46.png',
+		title: 'Various versions have evolved daf',
+		narx: '400',
+		image1: '/F2.png'
+	},{
+		name: 'Business',
+		image: '/course/Sample 26.png',
+		title: 'Various versions have evolved daf',
+		narx: '600',
+		image1: '/F1.png'
+	},{
+		name: 'Business',
+		image: '/course/Sample 12.png',
+		title: 'Various versions have evolved daf',
+		narx: '800',
+		image1: '/F2.png'
+	},
+]
+
+export const service2 = [
+	{
+		name: 'Islamic Fund Management',
+		title: 'Start date : 21 December 2024',
+		excerpt: 'We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments.',
+		image: '/image 1.png',
+		image1: '/Frame 1116606850.png'
+	},
+	{
+		name: 'Islamic Fund Management',
+		title: 'Start date : 21 December 2024',
+		excerpt: 'We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments.',
+		image: '/image 1.png',
+		image1: '/Frame 1116606850.png'
+	},
+	{
+		name: 'Islamic Fund Management',
+		title: 'Start date : 21 December 2024',
+		excerpt: 'We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments.',
+		image: '/image 1.png',
+		image1: '/Frame 1116606850.png'
+	},
+	{
+		name: 'Islamic Fund Management',
+		title: 'Start date : 21 December 2024',
+		excerpt: 'We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments.',
+		image: '/image 1.png',
+		image1: '/Frame 1116606850.png'
+	},
+	{
+		name: 'Islamic Fund Management',
+		title: 'Start date : 21 December 2024',
+		excerpt: 'We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments.',
+		image: '/image 1.png',
+		image1: '/Frame 1116606850.png'
+	},
+	{
+		name: 'Islamic Fund Management',
+		title: 'Start date : 21 December 2024',
+		excerpt: 'We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments.',
+		image: '/image 1.png',
+		image1: '/Frame 1116606850.png'
+	},
+]
