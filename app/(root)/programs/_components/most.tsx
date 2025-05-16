@@ -1,26 +1,3 @@
-// 'use client'
-
-// import { course } from "@/constants"
-
-// function Most(){
-
-//   return (
-//     <div className='container mx-auto max-w-6xl py-24'>
-//       <h1 className='text-center text-3xl sm:text-4xl md:text-5xl font-bold'>
-//       Most Popular Course
-//       </h1>
-//       <p className='mx-auto max-w-xl text-center text-sm sm:text-base text-muted-foreground mt-4'>Expert guidance for managing funds in alignment with Islamic principles, helping you make informed, halal investment decisions.</p>
-//     <div className="mt-15 gap-15 justify-center w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 text-black">
-
-// {/*Kodni bu yerga yoz*/}
-
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default Most;
-
 'use client'
 
 import { FiArrowUpRight } from "react-icons/fi";

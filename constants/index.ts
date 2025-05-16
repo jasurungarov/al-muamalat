@@ -5,13 +5,26 @@ import {
 	ListCollapse,
 } from 'lucide-react'
 
-
 export const navLinks = [
-	{ name: 'Home', route: '/', icon: Home },
-	{ name: 'Programs', route: '/programs', icon: ListCollapse },
-	{ name: 'Finance Tools', route: '/financetools', icon: FileCode2 },
-	{ name: 'Contact', route: '/contact', icon: Contact2 },
+  { name: 'Home', route: '', icon: Home },
+
+  { 
+    name: 'Programs', 
+    route: 'programs',
+    icon: ListCollapse,
+    label: 'Programs', 
+    dropdownItems: [
+      { name: 'International educational programs', route: 'international' },
+      { name: 'Specialized courses', route: 'specialized-courses' },
+      { name: 'Islamic Finance Literacy Course', route: 'islamic-finance' },
+      { name: 'Certification program', route: 'certification-program' }
+    ]
+  },
+
+  { name: 'Finance Tools', route: 'financetools', icon: FileCode2 },
+  { name: 'Contact', route: 'contact', icon: Contact2 },
 ]
+
 
 export const lngs = [
 	{ route: 'en', label: 'English' },

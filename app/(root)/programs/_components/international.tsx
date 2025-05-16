@@ -4,7 +4,7 @@ import { FaCircle } from "react-icons/fa";
 
 function International() {
   return (
-  <div className='container mx-auto max-w-6xl py-24'>
+  <div id="international" className='container mx-auto max-w-6xl py-24'>
   <h1 className='text-center text-3xl sm:text-4xl md:text-5xl font-bold'>
   International educational programs
   </h1>
