@@ -6,7 +6,7 @@ import { course } from "@/constants"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import Image from "next/image"
-import { Separator } from "@/components/ui/separator";
+
 
 function Most() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -61,35 +61,44 @@ function Most() {
         {course.map((item) => (
           <div
             key={item.name}
-            className="min-w-[300px] max-w-[350px] flex-shrink-0"
+            className="relative min-w-[300px] max-w-[350px] p-4 rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
+            style={{ backgroundColor: 'rgba(255, 255, 255, 1)' }}
           >
-            <div className="mb-2">
-            <p className="bg-white font-bold text-black flex justify-center rounded-md w-20 py-1">{item.name}</p>
+            {/* Kurs rasmi */}
+            <div className="relative">
+              <Image
+                src={item.image}
+                alt={item.name}
+                width={320}
+                height={200}
+                className="rounded-md w-full object-cover"
+              />
+          
+              {/* Kurs nomi badge — rasm ustida, chapda */}
+              <p className="absolute top-3 left-3 bg-white font-bold text-black text-sm rounded-md px-3 py-1 shadow-md">
+                {item.name}
+              </p>
             </div>
-           
+          
+            {/* Kurs sarlavhasi */}
+            <p className="text-2xl font-semibold mt-4 text-black">{item.title}</p>
+          
+            {/* Ikkinchi rasm */}
             <Image
-              src={item.image}
-              alt={item.name}
-              width={320}
-              height={550}
-              className="rounded-md"
+              src={item.image1}
+              alt="Logo"
+              width={100}
+              height={50}
+              className="py-2"
             />
-            
-            <p className="text-2xl">{item.title}</p>
-            <Image
-            src={item.image1}
-            alt=" "
-            width={100}
-            height={50}
-            className="py-2" 
-            /> 
-            <Separator />
-            <div className="flex justify-between py-5">
-              <h1 className="text-3xl font-bold">${item.narx}</h1>
+          
+            {/* Narx va tugma */}
+            <div className="flex justify-between items-center py-4">
+              <h1 className="text-2xl font-bold text-black">${item.narx}</h1>
               <Button
                 variant="default"
                 size="icon"
-                className="size-10 rounded-full text-white shadow-lg mr-6"
+                className="size-10 rounded-full text-white shadow-lg"
               >
                 <FiArrowUpRight className="size-5" />
               </Button>

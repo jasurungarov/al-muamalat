@@ -11,6 +11,12 @@ import React, { useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
+import { toast } from 'sonner'
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault()
+
+  toast.success("Your message has been sent!")
+}
 
 function Footer() {
   const [active, setActive] = useState(false);
@@ -35,6 +41,7 @@ function Footer() {
   </div>
 
   {/* Ikkinchi katta div */}
+  <form onSubmit={handleSubmit}>
   <div className="grid sm:grid-cols-1 md:gap-4 w-full">
     <div className="w-full">
       <h1 className="text-4xl sm:text-3xl mt-2 font-creteRound font-bold md:text-5xl">Free consultation</h1>
@@ -74,6 +81,7 @@ function Footer() {
       Submit
     </Button>
   </div>
+  </form>
 </div>
 
   {/* Footer */}
