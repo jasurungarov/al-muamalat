@@ -25,6 +25,32 @@ export const navLinks = [
   { name: 'Contact', route: 'contact', icon: Contact2 },
 ]
 
+export const faqs = [
+  {
+    question: "Will I receive lifetime access to the courses?",
+    answer: "Yes, once you enroll, you’ll have lifetime access to all course materials.",
+  },
+  {
+    question: "Can I use the materials for community teaching?",
+    answer: "Absolutely. Our content is designed to be shared in educational and community settings.",
+  },
+  {
+    question: "Is there a free trial for the courses?",
+    answer: "Yes, we offer a 7-day free trial on selected courses.",
+  },
+  {
+    question: "Who can benefit from these courses?",
+    answer: "Anyone interested in learning or teaching Islamic finance and muamalat."
+  },
+    {
+    question: "Who can benefit from these courses?",
+    answer: "Anyone interested in learning or teaching Islamic finance and muamalat."
+  },
+    {
+    question: "Who can benefit from these courses?",
+    answer: "Anyone interested in learning or teaching Islamic finance and muamalat."
+  },
+]
 
 export const lngs = [
 	{ route: 'en', label: 'English' },
@@ -252,3 +278,22 @@ export const service2 = [
 		image1: '/Frame 1116606850.png'
 	},
 ]
+
+export const services3 = [
+  { label: "Web Development", value: "web" },
+  { label: "UI/UX Design", value: "design" },
+  { label: "SEO Optimization", value: "seo" },
+  { label: "Cybersecurity Consulting", value: "cyber" },
+]
+
+export const budgets = [
+  { label: "$500 - $1,000", value: "500-1000" },
+  { label: "$1,000 - $5,000", value: "1000-5000" },
+  { label: "$5,000 - $10,000", value: "5000-10000" },
+  { label: "$10,000+", value: "10000+" },
+]
+
+export const countries = [
+    "Uzbekistan", "Kazakhstan", "Kyrgyzstan", "Tajikistan", "Russia", 
+    "United States", "United Kingdom", "Turkey", "Germany", "France", "Saudi Arabia"
+  ];

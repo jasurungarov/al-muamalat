@@ -53,61 +53,59 @@ function Navbar() {
 
         {/* Nav Links - Desktop */}
         <div className="gap-2 hidden md:flex">
-          {navLinks.map((nav) => (
-            <div key={nav.route} className="relative flex items-center dropdown-container">
-              {nav.dropdownItems ? (
-                <>
-                  {/* Programs tugmasi - sahifaga olib boradi */}
-                  <Link
-                    href={`/${nav.route}`}
-                    className={cn(
-                      'hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors',
-                      // Home sahifasi uchun rangni tekshirish
-                      (pathname === `/${nav.route}` || (nav.route === "home" && pathname === "/")) ? 'text-green-500' : ''
-                    )}
-                  >
-                    {nav.name}
-                  </Link>
+  {navLinks.map((nav) => (
+  <div key={nav.route} className="relative flex items-center dropdown-container">
+    {nav.dropdownItems ? (
+      <>
+        {/* Programs – sahifaga olib boradi VA dropdownni ochadi */}
+        <Link
+          href={`/${nav.route}`}
+          onClick={(e) => {
+            e.preventDefault(); // sahifani darhol almashtirishni to'xtatamiz
+            handleDropdownToggle(nav.name); // dropdownni ochamiz
+            router.push(`/${nav.route}`); // sahifaga yo'naltiramiz
+          }}
+          className={cn(
+            'hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors flex items-center gap-1',
+            (pathname === `/${nav.route}` || (nav.route === "home" && pathname === "/")) ? 'text-green-500' : ''
+          )}
+        >
+          {nav.name}
+          <ChevronDown size={16} />
+        </Link>
 
-                  {/* ChevronDown - dropdownni ochadi */}
-                  <button
-                    onClick={() => handleDropdownToggle(nav.name)}
-                    className="-ml-2  hover:bg-blue-400/20 hover:py-2 rounded-sm"
-                  >
-                    <ChevronDown size={16} />
-                  </button>
+        {/* Dropdown menyusi */}
+        {activeDropdown === nav.name && (
+          <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md z-50 py-2">
+            {nav.dropdownItems.map((item) => (
+              <Link
+                key={item.route}
+                href={`/${item.route}`}
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400/20"
+                onClick={() => setActiveDropdown(null)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        )}
+      </>
+    ) : (
+      // Oddiy nav linklar
+      <Link
+        href={`/${nav.route}`}
+        className={cn(
+          'hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors',
+          (pathname === `/${nav.route}` || (nav.route === "home" && pathname === "/")) ? 'text-primary' : ''
+        )}
+      >
+        {nav.name}
+      </Link>
+    )}
+  </div>
+))}
 
-                  {/* Dropdown menyusi */}
-                  {activeDropdown === nav.name && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md z-50 py-2">
-                      {nav.dropdownItems.map((item) => (
-                        <Link
-                          key={item.route}
-                          href={`/${item.route}`}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400/20"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                // Boshqa nav linklar
-                <Link
-                  href={`/${nav.route}`}
-                  className={cn(
-                    'hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors',
-                    // Home sahifasi uchun rangni tekshirish
-                    (pathname === `/${nav.route}` || (nav.route === "home" && pathname === "/")) ? 'text-primary' : ''
-                  )}
-                >
-                  {nav.name}
-                </Link>
-              )}
-            </div>
-          ))}
+
         </div>
 
         {/* Desktop - Right section */}
@@ -132,36 +130,81 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu (Dropdown) */}
-      {isOpen && (
-        <div className='md:hidden px-4 pt-4 pb-6 bg-background border-t shadow-sm'>
-          <div className='flex flex-col gap-3'>
-            {navLinks.map((nav) => (
-              <Link
-                key={nav.route}
-                href={nav.route}
-                onClick={() => setIsOpen(false)}
+{isOpen && (
+  <div className="md:hidden px-4 pt-4 pb-6 bg-background border-t shadow-sm">
+    <div className="flex flex-col gap-3">
+      {navLinks.map((nav) => (
+        <div key={nav.name} className="relative">
+          {nav.dropdownItems ? (
+            <>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActiveDropdown((prev) =>
+                    prev === nav.name ? null : nav.name
+                  );
+                  router.push(`/${nav.route}`); // sahifaga yo'naltiramiz
+                  setIsOpen(false); // menyuni yopamiz
+                }}
                 className={cn(
-                  'py-2 px-3 rounded-md hover:bg-green-300/20 transition-colors',
-                  pathname === nav.route && 'text-green-400'
+                  'w-full text-left py-2 px-3 rounded-md hover:bg-green-300/20 transition-colors flex justify-between items-center',
+                  activeDropdown === nav.name && 'text-green-400'
                 )}
               >
                 {nav.name}
-              </Link>
-            ))}
+                <ChevronDown size={16} />
+              </button>
 
-            <Button
-              onClick={() => {
-                setIsOpen(false)
-                router.push('/SignIn')
-              }}
-              variant="default"
-              className="w-full mt-2"
+              {/* Dropdown items - faqat ochilgan holatda */}
+              {activeDropdown === nav.name && (
+                <div className="pl-4 mt-1 flex flex-col gap-2">
+                  {nav.dropdownItems.map((item) => (
+                    <Link
+                      key={item.route}
+                      href={`/${item.route}`}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setActiveDropdown(null);
+                      }}
+                      className="py-2 px-3 rounded-md hover:bg-green-300/20 transition-colors text-sm"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            <Link
+              href={`/${nav.route}`}
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                'py-2 px-3 rounded-md hover:bg-green-300/20 transition-colors',
+                pathname === `/${nav.route}` && 'text-green-400'
+              )}
             >
-              Sign In
-            </Button>
-          </div>
+              {nav.name}
+            </Link>
+          )}
         </div>
-      )}
+      ))}
+
+      <Button
+        onClick={() => {
+          setIsOpen(false);
+          router.push('/SignIn');
+        }}
+        variant="default"
+        className="w-full mt-2"
+      >
+        Sign In
+      </Button>
+    </div>
+  </div>
+)}
+
+
+
     </div>
   );
 }

@@ -1,20 +1,12 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-// import {
-// 	Carousel,
-// 	CarouselContent,
-// 	CarouselItem,
-// } from '@/components/ui/carousel'
-// import { companies } from '@/constants'
-// import useTranslate from '@/hooks/use-translate'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaRegCalendarDays } from "react-icons/fa6";
-// import Autoplay from 'embla-carousel-autoplay'
+
 
 function Hero() {
-	// const t = useTranslate()
 
 	return (
 		<>

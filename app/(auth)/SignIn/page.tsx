@@ -12,30 +12,11 @@ import React, { useState } from 'react'
 function Auth() {
   const [active, setActive] = useState(false)
   const router = useRouter();
- 
-    // const registerModal = useRegisterModal();
-    // const loginModal = useLoginModal();
-  
-    // const { data } = useSession();
-    // console.log(data);
-  
-    // const onOpenRegisterModal = useCallback(() => {
-    //   registerModal.onOpen();
-    // }, [registerModal]);
-  
-    // const onOpenLoginModal = useCallback(() => {
-    //   loginModal.onOpen();
-    // }, [loginModal]);
 
   return (
-
   <>
-  {/* <RegisterModal/> */}
-  {/* <LoginModal /> */}
-
   <div className="grid grid-cols-1 justify-center md:grid-cols-2 gap-2 items-center h-screen max-md:px-4 max-md:py-8 md:ml-20">
-
-<div className="flex flex-col justify-center md:justify-between gap-6 h-full md:h-[70vh] mb-0 ml-30 max-md:ml-0 max-md:items-center max-md:text-center">
+   <div className="flex flex-col justify-center md:justify-between gap-6 h-full md:h-[70vh] mb-0 ml-30 max-md:ml-0 max-md:items-center max-md:text-center">
   
   <div className='flex items-center gap-4 max-md:flex-col max-md:gap-2'>
     <Logo />
@@ -52,17 +33,21 @@ function Auth() {
       />
     </div>
   </div>
-
+<form action=" ">
   <div className='grid max-md:grid-cols-1 grid-cols-2 md:gap-4 w-full max-md:w-full max-md:px-4'>
     <h1 className="text-5xl mt-2 max-md:text-3xl font-creteRound font-bold">Get Started</h1>
 
     <Input
+      id="email"
+      type="email"
       className='w-90 col-span-2 max-md:w-full max-md:mt-2'
-      placeholder='Your Email address'
+      placeholder='Your Email Address'
       onFocus={() => setActive(true)}
       onBlur={() => setActive(false)}
     />
     <Input
+      id="name"
+      type="text"
       className='w-90 col-span-2 max-md:w-full max-md:mt-2'
       placeholder='Password'
       onFocus={() => setActive(true)}
@@ -83,6 +68,7 @@ function Auth() {
       Create a new account!
     </h1>
   </div>
+  </form>
 </div>
 
 <div className='flex-col space-y-2 items-center justify-center w-120 h-140 bg-primary mr-auto rounded-2xl hidden md:flex'>

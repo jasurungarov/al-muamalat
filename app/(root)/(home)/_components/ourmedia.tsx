@@ -31,8 +31,8 @@ function OurMedia() {
       </p>
 
       {/* Arrow & Title */}
-      <div className="mt-10 flex items-center justify-between px-2">
-        <h2 className="text-4xl font-bold">Our media showcase</h2>
+      <div className="mt-10 flex items-center justify-between">
+        <h2 className="text-4xl sm:text-3xl font-bold">Our media showcase</h2>
         <div className="flex gap-2">
           <Button size="icon" variant="outline" onClick={() => scroll("left")}>
             <ArrowLeft className="h-5 w-5" />
